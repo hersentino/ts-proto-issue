@@ -10,9 +10,9 @@ export class AppController {
     console.log('request', request);
 
     // will not work
-    // return { messageTest30100: 'Hello', messageTest: 'World' } as TestUnaryResponse;
+    return { messageTest30100: 'Hello', messageTest: 'World' } as TestUnaryResponse;
 
     // will work
-    return { messageTest_30_100: 'Hello', messageTest: 'World' } as unknown as TestUnaryResponse;
+    // return { messageTest_30_100: 'Hello', messageTest: 'World' } as unknown as TestUnaryResponse;
   }
 }
