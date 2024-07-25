@@ -1,0 +1,26 @@
+{
+  "name": "ts-proto-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:nest": "nest start --entryFile server-nest/index.js",
+    "start:generated": "ts-node server-generated-file/index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.1",
+    "@nestjs/common": "^10.3.10",
+    "@nestjs/core": "^10.3.10",
+    "@nestjs/microservices": "^10.3.10",
+    "protobufjs": "^7.3.2",
+    "ts-node": "^10.9.2",
+    "ts-proto": "^1.181.1",
+    "typecript": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12"
+  }
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello;
+
+service HelloService {
+    rpc TestUnary(TestUnaryRequest) returns (TestUnaryResponse) {}
+}
+
+message TestUnaryRequest {
+    string message_test_30_100 = 1;
+    string message_test = 2;
+}
+
+message TestUnaryResponse {
+    string message_test_30_100 = 1;
+    string message_test = 2;
+}
+
+
