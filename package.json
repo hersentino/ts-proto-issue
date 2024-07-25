@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:nest": "nest start --entryFile server-nest/index.js",
-    "start:generated": "ts-node server-generated-file/index"
+    "start": "nest start --entryFile server-nest/index.js"
   },
   "keywords": [],
   "author": "",
