@@ -1,9 +1,24 @@
 ### Bug
 
-If the proto contains a number inside field name, the generated type proto with NestJS option will not match the correct object that we need to return.
-For example, for a proto that contains the field name `message_test_30_100`, the correct NestJS return field name should be `messageTest_30_100`, but it is `messageTest30100` in the generated proto files.
+With nestjs option, if proto like this :
 
-The consequense is `message_test_30_100` is not sent back from the server inside the response
+```
+message TestUnaryRequest {
+    string message_test_30_100 = 1;
+    string message_test = 2;
+}
+```
+
+`message_test_30_100` will become `messageTest30100` inside generated proto:
+
+```
+interface TestUnaryRequest {
+  messageTest30100: string;
+  messageTest: string;
+}
+```
+
+but it should be `messageTest_30_100` in order to works with nestjs grpc server, types are wrong
 
 ### Reproduce the bug
 
