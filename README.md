@@ -22,7 +22,7 @@ but it should be `messageTest_30_100` in order to works with nestjs grpc server,
 
 ### Reproduce the bug
 
-- `yarn start`
+- `npm run start`
 - `grpcurl -plaintext -d '{}' -vv -proto ./hello.proto localhost:3000 hello.HelloService/TestUnary`
 - Response contents of grpccurl will contain `message_test` but not `message_test_30_100`
 - Then comment out line `13` and uncomment line `16` inside `server-nest/app.controller.ts`
